@@ -1,0 +1,29 @@
+{
+  "name": "karamellfm",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start:api": "node ./api/index.js",
+    "start": "http-server -p 8082 ./dist",
+    "build:prod": "export NODE_ENV='production' && npm run build && npm run build:tw",
+    "build": "webpack",
+    "build:tw": "tailwind build ./src/css/tw-main.css -o ./dist/main.css",
+    "build:ts": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "tailwindcss": "^1.7.6",
+    "ytdl-core": "^3.2.2"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "postcss-loader": "^3.0.0",
+    "typescript": "^4.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
