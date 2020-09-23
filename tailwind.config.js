@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
     purge: [
       './dist/**/*.html',
+      './dist/**/index.*.js'
     ],
     theme: {
       fontFamily: {
